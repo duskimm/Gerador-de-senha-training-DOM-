@@ -1,4 +1,5 @@
-import {nanoid} from 'nanoid';
+import { nanoid } from 'nanoid';
+import './style.css'
 
 const GeradorBtn = document.querySelector('button');
 const SenhaVisual = document.querySelector('h2');

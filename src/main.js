@@ -1,10 +1,19 @@
 import { nanoid } from 'nanoid';
-import './style.css'
+import copy from 'clipboard-copy';
+import './style.css';
 
-const GeradorBtn = document.querySelector('button');
-const SenhaVisual = document.querySelector('h2');
+const GenBtn = document.querySelector('button');
+const VisibleKey = document.querySelector('h2');
 
-GeradorBtn.addEventListener('click', () => {
+GenBtn.addEventListener('click', () => {
   const randomPassword = nanoid();
-  SenhaVisual.innerHTML = randomPassword;
+  VisibleKey.innerHTML = randomPassword;
+  
+});
+
+const copyKey = copy;
+
+VisibleKey.addEventListener('click', function () {
+  copyKey(event.target.innerHTML);
+  alert('Senha copiada com sucesso')
 });
